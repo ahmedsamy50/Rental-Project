@@ -1,0 +1,2168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="dbRentalsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="dbRentalsModelStoreContainer">
+          <EntitySet Name="Advertising" EntityType="dbRentalsModel.Store.Advertising" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BankTransactionDetails" EntityType="dbRentalsModel.Store.BankTransactionDetails" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BankTransactions" EntityType="dbRentalsModel.Store.BankTransactions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Cities" EntityType="dbRentalsModel.Store.Cities" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ContactUs" EntityType="dbRentalsModel.Store.ContactUs" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Contracts" EntityType="dbRentalsModel.Store.Contracts" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Countries" EntityType="dbRentalsModel.Store.Countries" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Currency" EntityType="dbRentalsModel.Store.Currency" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Districts" EntityType="dbRentalsModel.Store.Districts" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LogUserAction" EntityType="dbRentalsModel.Store.LogUserAction" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Modules" EntityType="dbRentalsModel.Store.Modules" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Nationalities" EntityType="dbRentalsModel.Store.Nationalities" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Organization" EntityType="dbRentalsModel.Store.Organization" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Owners" EntityType="dbRentalsModel.Store.Owners" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PaymentTypes" EntityType="dbRentalsModel.Store.PaymentTypes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Permissions" EntityType="dbRentalsModel.Store.Permissions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Photos" EntityType="dbRentalsModel.Store.Photos" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Rentals" EntityType="dbRentalsModel.Store.Rentals" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Streets" EntityType="dbRentalsModel.Store.Streets" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TransactionLogs" EntityType="dbRentalsModel.Store.TransactionLogs" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TransactionLogTypes" EntityType="dbRentalsModel.Store.TransactionLogTypes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UnitPrices" EntityType="dbRentalsModel.Store.UnitPrices" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Units" EntityType="dbRentalsModel.Store.Units" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UnitTypes" EntityType="dbRentalsModel.Store.UnitTypes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Users" EntityType="dbRentalsModel.Store.Users" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UsersModules" EntityType="dbRentalsModel.Store.UsersModules" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_BankTransactionDetails_BankTransactions" Association="dbRentalsModel.Store.FK_BankTransactionDetails_BankTransactions">
+            <End Role="BankTransactions" EntitySet="BankTransactions" />
+            <End Role="BankTransactionDetails" EntitySet="BankTransactionDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BankTransactionDetails_PaymentTypes" Association="dbRentalsModel.Store.FK_BankTransactionDetails_PaymentTypes">
+            <End Role="PaymentTypes" EntitySet="PaymentTypes" />
+            <End Role="BankTransactionDetails" EntitySet="BankTransactionDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BankTransactions_Contracts" Association="dbRentalsModel.Store.FK_BankTransactions_Contracts">
+            <End Role="Contracts" EntitySet="Contracts" />
+            <End Role="BankTransactions" EntitySet="BankTransactions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BankTransactions_Contracts1" Association="dbRentalsModel.Store.FK_BankTransactions_Contracts1">
+            <End Role="Contracts" EntitySet="Contracts" />
+            <End Role="BankTransactions" EntitySet="BankTransactions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BankTransactions_Owners" Association="dbRentalsModel.Store.FK_BankTransactions_Owners">
+            <End Role="Owners" EntitySet="Owners" />
+            <End Role="BankTransactions" EntitySet="BankTransactions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BankTransactions_Rentals" Association="dbRentalsModel.Store.FK_BankTransactions_Rentals">
+            <End Role="Rentals" EntitySet="Rentals" />
+            <End Role="BankTransactions" EntitySet="BankTransactions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cities_Countries" Association="dbRentalsModel.Store.FK_Cities_Countries">
+            <End Role="Countries" EntitySet="Countries" />
+            <End Role="Cities" EntitySet="Cities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Contracts_Currency" Association="dbRentalsModel.Store.FK_Contracts_Currency">
+            <End Role="Currency" EntitySet="Currency" />
+            <End Role="Contracts" EntitySet="Contracts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Contracts_Owners" Association="dbRentalsModel.Store.FK_Contracts_Owners">
+            <End Role="Owners" EntitySet="Owners" />
+            <End Role="Contracts" EntitySet="Contracts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Contracts_Rentals" Association="dbRentalsModel.Store.FK_Contracts_Rentals">
+            <End Role="Rentals" EntitySet="Rentals" />
+            <End Role="Contracts" EntitySet="Contracts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Contracts_Units" Association="dbRentalsModel.Store.FK_Contracts_Units">
+            <End Role="Units" EntitySet="Units" />
+            <End Role="Contracts" EntitySet="Contracts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Districts_Cities" Association="dbRentalsModel.Store.FK_Districts_Cities">
+            <End Role="Cities" EntitySet="Cities" />
+            <End Role="Districts" EntitySet="Districts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Owners_Nationalities" Association="dbRentalsModel.Store.FK_Owners_Nationalities">
+            <End Role="Nationalities" EntitySet="Nationalities" />
+            <End Role="Owners" EntitySet="Owners" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Owners_Organization" Association="dbRentalsModel.Store.FK_Owners_Organization">
+            <End Role="Organization" EntitySet="Organization" />
+            <End Role="Owners" EntitySet="Owners" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Owners_Users" Association="dbRentalsModel.Store.FK_Owners_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Owners" EntitySet="Owners" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rentals_Nationalities" Association="dbRentalsModel.Store.FK_Rentals_Nationalities">
+            <End Role="Nationalities" EntitySet="Nationalities" />
+            <End Role="Rentals" EntitySet="Rentals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rentals_Organization" Association="dbRentalsModel.Store.FK_Rentals_Organization">
+            <End Role="Organization" EntitySet="Organization" />
+            <End Role="Rentals" EntitySet="Rentals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rentals_Users" Association="dbRentalsModel.Store.FK_Rentals_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Rentals" EntitySet="Rentals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Streets_Districts" Association="dbRentalsModel.Store.FK_Streets_Districts">
+            <End Role="Districts" EntitySet="Districts" />
+            <End Role="Streets" EntitySet="Streets" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TransactionLogs_Organization" Association="dbRentalsModel.Store.FK_TransactionLogs_Organization">
+            <End Role="Organization" EntitySet="Organization" />
+            <End Role="TransactionLogs" EntitySet="TransactionLogs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TransactionLogs_Owners" Association="dbRentalsModel.Store.FK_TransactionLogs_Owners">
+            <End Role="Owners" EntitySet="Owners" />
+            <End Role="TransactionLogs" EntitySet="TransactionLogs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TransactionLogs_Rentals" Association="dbRentalsModel.Store.FK_TransactionLogs_Rentals">
+            <End Role="Rentals" EntitySet="Rentals" />
+            <End Role="TransactionLogs" EntitySet="TransactionLogs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TransactionLogs_TransactionLogTypes" Association="dbRentalsModel.Store.FK_TransactionLogs_TransactionLogTypes">
+            <End Role="TransactionLogTypes" EntitySet="TransactionLogTypes" />
+            <End Role="TransactionLogs" EntitySet="TransactionLogs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TransactionLogs_Users" Association="dbRentalsModel.Store.FK_TransactionLogs_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="TransactionLogs" EntitySet="TransactionLogs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UnitPrices_Units" Association="dbRentalsModel.Store.FK_UnitPrices_Units">
+            <End Role="Units" EntitySet="Units" />
+            <End Role="UnitPrices" EntitySet="UnitPrices" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UnitPrices_Users" Association="dbRentalsModel.Store.FK_UnitPrices_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="UnitPrices" EntitySet="UnitPrices" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Units_Owners" Association="dbRentalsModel.Store.FK_Units_Owners">
+            <End Role="Owners" EntitySet="Owners" />
+            <End Role="Units" EntitySet="Units" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Units_Streets" Association="dbRentalsModel.Store.FK_Units_Streets">
+            <End Role="Streets" EntitySet="Streets" />
+            <End Role="Units" EntitySet="Units" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Units_UnitTypes1" Association="dbRentalsModel.Store.FK_Units_UnitTypes1">
+            <End Role="UnitTypes" EntitySet="UnitTypes" />
+            <End Role="Units" EntitySet="Units" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_Nationalities" Association="dbRentalsModel.Store.FK_Users_Nationalities">
+            <End Role="Nationalities" EntitySet="Nationalities" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsersModules_Modules" Association="dbRentalsModel.Store.FK_UsersModules_Modules">
+            <End Role="Modules" EntitySet="Modules" />
+            <End Role="UsersModules" EntitySet="UsersModules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsersModules_Users" Association="dbRentalsModel.Store.FK_UsersModules_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="UsersModules" EntitySet="UsersModules" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Advertising">
+          <Key>
+            <PropertyRef Name="AdvertisingId" />
+          </Key>
+          <Property Name="AdvertisingId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="StartDate" Type="date" Nullable="false" />
+          <Property Name="EndDate" Type="date" Nullable="false" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="Priority" Type="int" Nullable="false" />
+          <Property Name="Image" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="Dated" Type="date" Nullable="false" />
+          <Property Name="OrganizationId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BankTransactionDetails">
+          <Key>
+            <PropertyRef Name="BankTransactionDetailsId" />
+          </Key>
+          <Property Name="BankTransactionDetailsId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BankTransactionId" Type="int" Nullable="false" />
+          <Property Name="Month" Type="nvarchar" Nullable="false" MaxLength="2" />
+          <Property Name="Year" Type="nvarchar" Nullable="false" MaxLength="4" />
+          <Property Name="Amount" Type="decimal" Nullable="false" />
+          <Property Name="PaymentTypeId" Type="int" />
+          <Property Name="BankTransactionReturnId" Type="nvarchar" MaxLength="100" />
+          <Property Name="Paid" Type="bit" />
+          <Property Name="UserId" Type="int" />
+        </EntityType>
+        <EntityType Name="BankTransactions">
+          <Key>
+            <PropertyRef Name="TransactionId" />
+          </Key>
+          <Property Name="TransactionId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OwnerId" Type="int" Nullable="false" />
+          <Property Name="RentalId" Type="int" Nullable="false" />
+          <Property Name="ContractId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cities">
+          <Key>
+            <PropertyRef Name="CitiyId" />
+          </Key>
+          <Property Name="CitiyId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EnglishName" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="CountyId" Type="int" Nullable="false" />
+          <Property Name="ArabicName" Type="nvarchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="ContactUs">
+          <Key>
+            <PropertyRef Name="ContactUsId" />
+          </Key>
+          <Property Name="ContactUsId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Subject" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Message" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="Dated" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Contracts">
+          <Key>
+            <PropertyRef Name="ContractId" />
+          </Key>
+          <Property Name="ContractId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RentalId" Type="int" Nullable="false" />
+          <Property Name="OwnerId" Type="int" Nullable="false" />
+          <Property Name="StartDate" Type="date" Nullable="false" />
+          <Property Name="EndDate" Type="date" Nullable="false" />
+          <Property Name="EmailService" Type="bit" Nullable="false" />
+          <Property Name="SMSService" Type="bit" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="Dated" Type="datetime" Nullable="false" />
+          <Property Name="CurrencyId" Type="int" Nullable="false" />
+          <Property Name="Price" Type="decimal" Nullable="false" />
+          <Property Name="OrganizationId" Type="int" Nullable="false" />
+          <Property Name="UnitId" Type="int" Nullable="false" />
+          <Property Name="Descriptions" Type="nvarchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="Countries">
+          <Key>
+            <PropertyRef Name="CountryId" />
+          </Key>
+          <Property Name="CountryId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SortName" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="EnglishName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="PhoneCode" Type="int" Nullable="false" />
+          <Property Name="ArabicName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Currency">
+          <Key>
+            <PropertyRef Name="CurrencyId" />
+          </Key>
+          <Property Name="CurrencyId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="ArabicName" Type="nvarchar" MaxLength="50" />
+          <Property Name="EnglishName" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Districts">
+          <Key>
+            <PropertyRef Name="DistricId" />
+          </Key>
+          <Property Name="DistricId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EnglishName" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="CitiyId" Type="int" Nullable="false" />
+          <Property Name="ArabicName" Type="nvarchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="LogUserAction">
+          <Key>
+            <PropertyRef Name="SystemTransationId" />
+          </Key>
+          <Property Name="SystemTransationId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="LogDate" Type="datetime" Nullable="false" />
+          <Property Name="PageUrl" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="PageName" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="LogAction" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="IPAddress" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Modules">
+          <Key>
+            <PropertyRef Name="ModuleId" />
+          </Key>
+          <Property Name="ModuleId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ParentId" Type="int" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="URL" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Priority" Type="int" Nullable="false" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Nationalities">
+          <Key>
+            <PropertyRef Name="NationalityId" />
+          </Key>
+          <Property Name="NationalityId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EnglishName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ArabicName" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Organization">
+          <Key>
+            <PropertyRef Name="OrganizationId" />
+          </Key>
+          <Property Name="OrganizationId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="Logo" Type="image" />
+          <Property Name="Address" Type="nvarchar" MaxLength="300" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserId" Type="int" />
+        </EntityType>
+        <EntityType Name="Owners">
+          <Key>
+            <PropertyRef Name="OwnerId" />
+          </Key>
+          <Property Name="OwnerId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FullName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Exist" Type="bit" Nullable="false" />
+          <Property Name="Dated" Type="datetime" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="OrganizationId" Type="int" Nullable="false" />
+          <Property Name="SSN" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Deleted" Type="bit" Nullable="false" />
+          <Property Name="Phone" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="Photo" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="NationalityId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PaymentTypes">
+          <Key>
+            <PropertyRef Name="PaymentTypeId" />
+          </Key>
+          <Property Name="PaymentTypeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EnglishName" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="ArabicName" Type="nvarchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Permissions">
+          <Key>
+            <PropertyRef Name="PermissionsId" />
+          </Key>
+          <Property Name="PermissionsId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EnglishName" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="ArabicName" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Photos">
+          <Key>
+            <PropertyRef Name="PhotoId" />
+          </Key>
+          <Property Name="PhotoId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Image" Type="image" Nullable="false" />
+          <Property Name="TentalUnitId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Rentals">
+          <Key>
+            <PropertyRef Name="RentalId" />
+          </Key>
+          <Property Name="RentalId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FullName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Exist" Type="bit" Nullable="false" />
+          <Property Name="Dated" Type="datetime" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="OrganizationId" Type="int" Nullable="false" />
+          <Property Name="SSN" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Deleted" Type="bit" Nullable="false" />
+          <Property Name="Phone" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="Photo" Type="nvarchar" MaxLength="50" />
+          <Property Name="NationalityId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Streets">
+          <Key>
+            <PropertyRef Name="StreetId" />
+          </Key>
+          <Property Name="StreetId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EnglishName" Type="varchar" MaxLength="50" />
+          <Property Name="DistricId" Type="int" />
+          <Property Name="ArabicName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TransactionLogs">
+          <Key>
+            <PropertyRef Name="TransactionLogId" />
+          </Key>
+          <Property Name="TransactionLogId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="RentalId" Type="int" />
+          <Property Name="OwnerId" Type="int" />
+          <Property Name="UnitId" Type="int" />
+          <Property Name="UnitPriceId" Type="int" />
+          <Property Name="ContractId" Type="int" />
+          <Property Name="OrganizationId" Type="int" />
+          <Property Name="TransactionLogTypeId" Type="int" Nullable="false" />
+          <Property Name="Dated" Type="datetime" Nullable="false" />
+          <Property Name="TransactionUserId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TransactionLogTypes">
+          <Key>
+            <PropertyRef Name="TransactionLogITypeId" />
+          </Key>
+          <Property Name="TransactionLogITypeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EnglishName" Type="nvarchar" MaxLength="200" />
+          <Property Name="ArabicName" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="UnitPrices">
+          <Key>
+            <PropertyRef Name="UnitPriceId" />
+          </Key>
+          <Property Name="UnitPriceId" Type="decimal" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Price" Type="decimal" Nullable="false" />
+          <Property Name="UnitId" Type="int" Nullable="false" />
+          <Property Name="CurrenceId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="Dated" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Units">
+          <Key>
+            <PropertyRef Name="UnitId" />
+          </Key>
+          <Property Name="UnitId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UnitNumber" Type="int" Nullable="false" />
+          <Property Name="UnitName" Type="nvarchar" MaxLength="50" />
+          <Property Name="StreetId" Type="int" Nullable="false" />
+          <Property Name="UnitTypeId" Type="int" Nullable="false" />
+          <Property Name="OwnerId" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="300" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="Dated" Type="datetime" Nullable="false" />
+          <Property Name="Deleted" Type="bit" />
+          <Property Name="ParentID" Type="int" />
+        </EntityType>
+        <EntityType Name="UnitTypes">
+          <Key>
+            <PropertyRef Name="UnitTypeId" />
+          </Key>
+          <Property Name="UnitTypeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ArabicName" Type="nvarchar" MaxLength="50" />
+          <Property Name="EnglishName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FullName" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="200" />
+          <Property Name="SSN" Type="nvarchar" MaxLength="200" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" />
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="Photo" Type="nvarchar" MaxLength="200" />
+          <Property Name="Exist" Type="bit" Nullable="false" />
+          <Property Name="Dated" Type="datetime" Nullable="false" />
+          <Property Name="OrganizationId" Type="int" Nullable="false" />
+          <Property Name="UserRegId" Type="int" Nullable="false" />
+          <Property Name="Deleted" Type="bit" Nullable="false" />
+          <Property Name="NationalityId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UsersModules">
+          <Key>
+            <PropertyRef Name="ModuleId" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="ModuleId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_BankTransactionDetails_BankTransactions">
+          <End Role="BankTransactions" Type="dbRentalsModel.Store.BankTransactions" Multiplicity="1" />
+          <End Role="BankTransactionDetails" Type="dbRentalsModel.Store.BankTransactionDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BankTransactions">
+              <PropertyRef Name="TransactionId" />
+            </Principal>
+            <Dependent Role="BankTransactionDetails">
+              <PropertyRef Name="BankTransactionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BankTransactionDetails_PaymentTypes">
+          <End Role="PaymentTypes" Type="dbRentalsModel.Store.PaymentTypes" Multiplicity="0..1" />
+          <End Role="BankTransactionDetails" Type="dbRentalsModel.Store.BankTransactionDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PaymentTypes">
+              <PropertyRef Name="PaymentTypeId" />
+            </Principal>
+            <Dependent Role="BankTransactionDetails">
+              <PropertyRef Name="PaymentTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BankTransactions_Contracts">
+          <End Role="Contracts" Type="dbRentalsModel.Store.Contracts" Multiplicity="1" />
+          <End Role="BankTransactions" Type="dbRentalsModel.Store.BankTransactions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contracts">
+              <PropertyRef Name="ContractId" />
+            </Principal>
+            <Dependent Role="BankTransactions">
+              <PropertyRef Name="ContractId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BankTransactions_Contracts1">
+          <End Role="Contracts" Type="dbRentalsModel.Store.Contracts" Multiplicity="1" />
+          <End Role="BankTransactions" Type="dbRentalsModel.Store.BankTransactions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contracts">
+              <PropertyRef Name="ContractId" />
+            </Principal>
+            <Dependent Role="BankTransactions">
+              <PropertyRef Name="ContractId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BankTransactions_Owners">
+          <End Role="Owners" Type="dbRentalsModel.Store.Owners" Multiplicity="1" />
+          <End Role="BankTransactions" Type="dbRentalsModel.Store.BankTransactions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Owners">
+              <PropertyRef Name="OwnerId" />
+            </Principal>
+            <Dependent Role="BankTransactions">
+              <PropertyRef Name="OwnerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BankTransactions_Rentals">
+          <End Role="Rentals" Type="dbRentalsModel.Store.Rentals" Multiplicity="1" />
+          <End Role="BankTransactions" Type="dbRentalsModel.Store.BankTransactions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rentals">
+              <PropertyRef Name="RentalId" />
+            </Principal>
+            <Dependent Role="BankTransactions">
+              <PropertyRef Name="RentalId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cities_Countries">
+          <End Role="Countries" Type="dbRentalsModel.Store.Countries" Multiplicity="1" />
+          <End Role="Cities" Type="dbRentalsModel.Store.Cities" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Countries">
+              <PropertyRef Name="CountryId" />
+            </Principal>
+            <Dependent Role="Cities">
+              <PropertyRef Name="CountyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Contracts_Currency">
+          <End Role="Currency" Type="dbRentalsModel.Store.Currency" Multiplicity="1" />
+          <End Role="Contracts" Type="dbRentalsModel.Store.Contracts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Currency">
+              <PropertyRef Name="CurrencyId" />
+            </Principal>
+            <Dependent Role="Contracts">
+              <PropertyRef Name="CurrencyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Contracts_Owners">
+          <End Role="Owners" Type="dbRentalsModel.Store.Owners" Multiplicity="1" />
+          <End Role="Contracts" Type="dbRentalsModel.Store.Contracts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Owners">
+              <PropertyRef Name="OwnerId" />
+            </Principal>
+            <Dependent Role="Contracts">
+              <PropertyRef Name="OwnerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Contracts_Rentals">
+          <End Role="Rentals" Type="dbRentalsModel.Store.Rentals" Multiplicity="1" />
+          <End Role="Contracts" Type="dbRentalsModel.Store.Contracts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rentals">
+              <PropertyRef Name="RentalId" />
+            </Principal>
+            <Dependent Role="Contracts">
+              <PropertyRef Name="RentalId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Contracts_Units">
+          <End Role="Units" Type="dbRentalsModel.Store.Units" Multiplicity="1" />
+          <End Role="Contracts" Type="dbRentalsModel.Store.Contracts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Units">
+              <PropertyRef Name="UnitId" />
+            </Principal>
+            <Dependent Role="Contracts">
+              <PropertyRef Name="UnitId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Districts_Cities">
+          <End Role="Cities" Type="dbRentalsModel.Store.Cities" Multiplicity="1" />
+          <End Role="Districts" Type="dbRentalsModel.Store.Districts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cities">
+              <PropertyRef Name="CitiyId" />
+            </Principal>
+            <Dependent Role="Districts">
+              <PropertyRef Name="CitiyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Owners_Nationalities">
+          <End Role="Nationalities" Type="dbRentalsModel.Store.Nationalities" Multiplicity="1" />
+          <End Role="Owners" Type="dbRentalsModel.Store.Owners" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nationalities">
+              <PropertyRef Name="NationalityId" />
+            </Principal>
+            <Dependent Role="Owners">
+              <PropertyRef Name="NationalityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Owners_Organization">
+          <End Role="Organization" Type="dbRentalsModel.Store.Organization" Multiplicity="1" />
+          <End Role="Owners" Type="dbRentalsModel.Store.Owners" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Organization">
+              <PropertyRef Name="OrganizationId" />
+            </Principal>
+            <Dependent Role="Owners">
+              <PropertyRef Name="OrganizationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Owners_Users">
+          <End Role="Users" Type="dbRentalsModel.Store.Users" Multiplicity="1" />
+          <End Role="Owners" Type="dbRentalsModel.Store.Owners" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Owners">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Rentals_Nationalities">
+          <End Role="Nationalities" Type="dbRentalsModel.Store.Nationalities" Multiplicity="1" />
+          <End Role="Rentals" Type="dbRentalsModel.Store.Rentals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nationalities">
+              <PropertyRef Name="NationalityId" />
+            </Principal>
+            <Dependent Role="Rentals">
+              <PropertyRef Name="NationalityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Rentals_Organization">
+          <End Role="Organization" Type="dbRentalsModel.Store.Organization" Multiplicity="1" />
+          <End Role="Rentals" Type="dbRentalsModel.Store.Rentals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Organization">
+              <PropertyRef Name="OrganizationId" />
+            </Principal>
+            <Dependent Role="Rentals">
+              <PropertyRef Name="OrganizationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Rentals_Users">
+          <End Role="Users" Type="dbRentalsModel.Store.Users" Multiplicity="1" />
+          <End Role="Rentals" Type="dbRentalsModel.Store.Rentals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Rentals">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Streets_Districts">
+          <End Role="Districts" Type="dbRentalsModel.Store.Districts" Multiplicity="0..1" />
+          <End Role="Streets" Type="dbRentalsModel.Store.Streets" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Districts">
+              <PropertyRef Name="DistricId" />
+            </Principal>
+            <Dependent Role="Streets">
+              <PropertyRef Name="DistricId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TransactionLogs_Organization">
+          <End Role="Organization" Type="dbRentalsModel.Store.Organization" Multiplicity="0..1" />
+          <End Role="TransactionLogs" Type="dbRentalsModel.Store.TransactionLogs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Organization">
+              <PropertyRef Name="OrganizationId" />
+            </Principal>
+            <Dependent Role="TransactionLogs">
+              <PropertyRef Name="OrganizationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TransactionLogs_Owners">
+          <End Role="Owners" Type="dbRentalsModel.Store.Owners" Multiplicity="0..1" />
+          <End Role="TransactionLogs" Type="dbRentalsModel.Store.TransactionLogs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Owners">
+              <PropertyRef Name="OwnerId" />
+            </Principal>
+            <Dependent Role="TransactionLogs">
+              <PropertyRef Name="OwnerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TransactionLogs_Rentals">
+          <End Role="Rentals" Type="dbRentalsModel.Store.Rentals" Multiplicity="0..1" />
+          <End Role="TransactionLogs" Type="dbRentalsModel.Store.TransactionLogs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rentals">
+              <PropertyRef Name="RentalId" />
+            </Principal>
+            <Dependent Role="TransactionLogs">
+              <PropertyRef Name="RentalId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TransactionLogs_TransactionLogTypes">
+          <End Role="TransactionLogTypes" Type="dbRentalsModel.Store.TransactionLogTypes" Multiplicity="1" />
+          <End Role="TransactionLogs" Type="dbRentalsModel.Store.TransactionLogs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TransactionLogTypes">
+              <PropertyRef Name="TransactionLogITypeId" />
+            </Principal>
+            <Dependent Role="TransactionLogs">
+              <PropertyRef Name="TransactionLogTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TransactionLogs_Users">
+          <End Role="Users" Type="dbRentalsModel.Store.Users" Multiplicity="0..1" />
+          <End Role="TransactionLogs" Type="dbRentalsModel.Store.TransactionLogs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="TransactionLogs">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UnitPrices_Units">
+          <End Role="Units" Type="dbRentalsModel.Store.Units" Multiplicity="1" />
+          <End Role="UnitPrices" Type="dbRentalsModel.Store.UnitPrices" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Units">
+              <PropertyRef Name="UnitId" />
+            </Principal>
+            <Dependent Role="UnitPrices">
+              <PropertyRef Name="UnitId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UnitPrices_Users">
+          <End Role="Users" Type="dbRentalsModel.Store.Users" Multiplicity="1" />
+          <End Role="UnitPrices" Type="dbRentalsModel.Store.UnitPrices" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="UnitPrices">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Units_Owners">
+          <End Role="Owners" Type="dbRentalsModel.Store.Owners" Multiplicity="1" />
+          <End Role="Units" Type="dbRentalsModel.Store.Units" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Owners">
+              <PropertyRef Name="OwnerId" />
+            </Principal>
+            <Dependent Role="Units">
+              <PropertyRef Name="OwnerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Units_Streets">
+          <End Role="Streets" Type="dbRentalsModel.Store.Streets" Multiplicity="1" />
+          <End Role="Units" Type="dbRentalsModel.Store.Units" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Streets">
+              <PropertyRef Name="StreetId" />
+            </Principal>
+            <Dependent Role="Units">
+              <PropertyRef Name="StreetId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Units_UnitTypes1">
+          <End Role="UnitTypes" Type="dbRentalsModel.Store.UnitTypes" Multiplicity="1" />
+          <End Role="Units" Type="dbRentalsModel.Store.Units" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UnitTypes">
+              <PropertyRef Name="UnitTypeId" />
+            </Principal>
+            <Dependent Role="Units">
+              <PropertyRef Name="UnitTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_Nationalities">
+          <End Role="Nationalities" Type="dbRentalsModel.Store.Nationalities" Multiplicity="1" />
+          <End Role="Users" Type="dbRentalsModel.Store.Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nationalities">
+              <PropertyRef Name="NationalityId" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="NationalityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsersModules_Modules">
+          <End Role="Modules" Type="dbRentalsModel.Store.Modules" Multiplicity="1" />
+          <End Role="UsersModules" Type="dbRentalsModel.Store.UsersModules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Modules">
+              <PropertyRef Name="ModuleId" />
+            </Principal>
+            <Dependent Role="UsersModules">
+              <PropertyRef Name="ModuleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsersModules_Users">
+          <End Role="Users" Type="dbRentalsModel.Store.Users" Multiplicity="1" />
+          <End Role="UsersModules" Type="dbRentalsModel.Store.UsersModules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="UsersModules">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="Login_Users" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Type" Type="int" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dbRentalsModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="dbRentalsEntities" p1:LazyLoadingEnabled="true">
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(dbRentalsModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(dbRentalsModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+          <EntitySet Name="Advertising" EntityType="dbRentalsModel.Advertising" />
+          <EntitySet Name="BankTransactionDetails" EntityType="dbRentalsModel.BankTransactionDetails" />
+          <EntitySet Name="BankTransactions" EntityType="dbRentalsModel.BankTransactions" />
+          <EntitySet Name="Cities" EntityType="dbRentalsModel.Cities" />
+          <EntitySet Name="ContactUs" EntityType="dbRentalsModel.ContactUs" />
+          <EntitySet Name="Contracts" EntityType="dbRentalsModel.Contracts" />
+          <EntitySet Name="Countries" EntityType="dbRentalsModel.Countries" />
+          <EntitySet Name="Currency" EntityType="dbRentalsModel.Currency" />
+          <EntitySet Name="Districts" EntityType="dbRentalsModel.Districts" />
+          <EntitySet Name="LogUserAction" EntityType="dbRentalsModel.LogUserAction" />
+          <EntitySet Name="Modules" EntityType="dbRentalsModel.Modules" />
+          <EntitySet Name="Nationalities" EntityType="dbRentalsModel.Nationalities" />
+          <EntitySet Name="Organization" EntityType="dbRentalsModel.Organization" />
+          <EntitySet Name="Owners" EntityType="dbRentalsModel.Owners" />
+          <EntitySet Name="PaymentTypes" EntityType="dbRentalsModel.PaymentTypes" />
+          <EntitySet Name="Permissions" EntityType="dbRentalsModel.Permissions" />
+          <EntitySet Name="Photos" EntityType="dbRentalsModel.Photos" />
+          <EntitySet Name="Rentals" EntityType="dbRentalsModel.Rentals" />
+          <EntitySet Name="Streets" EntityType="dbRentalsModel.Streets" />
+          <EntitySet Name="TransactionLogs" EntityType="dbRentalsModel.TransactionLogs" />
+          <EntitySet Name="TransactionLogTypes" EntityType="dbRentalsModel.TransactionLogTypes" />
+          <EntitySet Name="UnitPrices" EntityType="dbRentalsModel.UnitPrices" />
+          <EntitySet Name="UnitTypes" EntityType="dbRentalsModel.UnitTypes" />
+          <EntitySet Name="Users" EntityType="dbRentalsModel.Users" />
+          <AssociationSet Name="FK_BankTransactionDetails_BankTransactions" Association="dbRentalsModel.FK_BankTransactionDetails_BankTransactions">
+            <End Role="BankTransactions" EntitySet="BankTransactions" />
+            <End Role="BankTransactionDetails" EntitySet="BankTransactionDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BankTransactionDetails_PaymentTypes" Association="dbRentalsModel.FK_BankTransactionDetails_PaymentTypes">
+            <End Role="PaymentTypes" EntitySet="PaymentTypes" />
+            <End Role="BankTransactionDetails" EntitySet="BankTransactionDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BankTransactions_Contracts" Association="dbRentalsModel.FK_BankTransactions_Contracts">
+            <End Role="Contracts" EntitySet="Contracts" />
+            <End Role="BankTransactions" EntitySet="BankTransactions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BankTransactions_Contracts1" Association="dbRentalsModel.FK_BankTransactions_Contracts1">
+            <End Role="Contracts" EntitySet="Contracts" />
+            <End Role="BankTransactions" EntitySet="BankTransactions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BankTransactions_Owners" Association="dbRentalsModel.FK_BankTransactions_Owners">
+            <End Role="Owners" EntitySet="Owners" />
+            <End Role="BankTransactions" EntitySet="BankTransactions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BankTransactions_Rentals" Association="dbRentalsModel.FK_BankTransactions_Rentals">
+            <End Role="Rentals" EntitySet="Rentals" />
+            <End Role="BankTransactions" EntitySet="BankTransactions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cities_Countries" Association="dbRentalsModel.FK_Cities_Countries">
+            <End Role="Countries" EntitySet="Countries" />
+            <End Role="Cities" EntitySet="Cities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Districts_Cities" Association="dbRentalsModel.FK_Districts_Cities">
+            <End Role="Cities" EntitySet="Cities" />
+            <End Role="Districts" EntitySet="Districts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Contracts_Currency" Association="dbRentalsModel.FK_Contracts_Currency">
+            <End Role="Currency" EntitySet="Currency" />
+            <End Role="Contracts" EntitySet="Contracts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Contracts_Owners" Association="dbRentalsModel.FK_Contracts_Owners">
+            <End Role="Owners" EntitySet="Owners" />
+            <End Role="Contracts" EntitySet="Contracts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Contracts_Rentals" Association="dbRentalsModel.FK_Contracts_Rentals">
+            <End Role="Rentals" EntitySet="Rentals" />
+            <End Role="Contracts" EntitySet="Contracts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Streets_Districts" Association="dbRentalsModel.FK_Streets_Districts">
+            <End Role="Districts" EntitySet="Districts" />
+            <End Role="Streets" EntitySet="Streets" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Owners_Nationalities" Association="dbRentalsModel.FK_Owners_Nationalities">
+            <End Role="Nationalities" EntitySet="Nationalities" />
+            <End Role="Owners" EntitySet="Owners" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rentals_Nationalities" Association="dbRentalsModel.FK_Rentals_Nationalities">
+            <End Role="Nationalities" EntitySet="Nationalities" />
+            <End Role="Rentals" EntitySet="Rentals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_Nationalities" Association="dbRentalsModel.FK_Users_Nationalities">
+            <End Role="Nationalities" EntitySet="Nationalities" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Owners_Organization" Association="dbRentalsModel.FK_Owners_Organization">
+            <End Role="Organization" EntitySet="Organization" />
+            <End Role="Owners" EntitySet="Owners" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rentals_Organization" Association="dbRentalsModel.FK_Rentals_Organization">
+            <End Role="Organization" EntitySet="Organization" />
+            <End Role="Rentals" EntitySet="Rentals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TransactionLogs_Organization" Association="dbRentalsModel.FK_TransactionLogs_Organization">
+            <End Role="Organization" EntitySet="Organization" />
+            <End Role="TransactionLogs" EntitySet="TransactionLogs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Owners_Users" Association="dbRentalsModel.FK_Owners_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Owners" EntitySet="Owners" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TransactionLogs_Owners" Association="dbRentalsModel.FK_TransactionLogs_Owners">
+            <End Role="Owners" EntitySet="Owners" />
+            <End Role="TransactionLogs" EntitySet="TransactionLogs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rentals_Users" Association="dbRentalsModel.FK_Rentals_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Rentals" EntitySet="Rentals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TransactionLogs_Rentals" Association="dbRentalsModel.FK_TransactionLogs_Rentals">
+            <End Role="Rentals" EntitySet="Rentals" />
+            <End Role="TransactionLogs" EntitySet="TransactionLogs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TransactionLogs_TransactionLogTypes" Association="dbRentalsModel.FK_TransactionLogs_TransactionLogTypes">
+            <End Role="TransactionLogTypes" EntitySet="TransactionLogTypes" />
+            <End Role="TransactionLogs" EntitySet="TransactionLogs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TransactionLogs_Users" Association="dbRentalsModel.FK_TransactionLogs_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="TransactionLogs" EntitySet="TransactionLogs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UnitPrices_Users" Association="dbRentalsModel.FK_UnitPrices_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="UnitPrices" EntitySet="UnitPrices" />
+          </AssociationSet>
+          <AssociationSet Name="UsersModules" Association="dbRentalsModel.UsersModules">
+            <End Role="Modules" EntitySet="Modules" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+          <FunctionImport Name="Login_Users" ReturnType="Collection(dbRentalsModel.Login_Users_Result)">
+          <Parameter Name="Type" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="Units" EntityType="dbRentalsModel.Units" />
+          <AssociationSet Name="FK_Contracts_Units" Association="dbRentalsModel.FK_Contracts_Units">
+            <End Role="Units" EntitySet="Units" />
+            <End Role="Contracts" EntitySet="Contracts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Units_Owners" Association="dbRentalsModel.FK_Units_Owners">
+            <End Role="Owners" EntitySet="Owners" />
+            <End Role="Units" EntitySet="Units" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Units_Streets" Association="dbRentalsModel.FK_Units_Streets">
+            <End Role="Streets" EntitySet="Streets" />
+            <End Role="Units" EntitySet="Units" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UnitPrices_Units" Association="dbRentalsModel.FK_UnitPrices_Units">
+            <End Role="Units" EntitySet="Units" />
+            <End Role="UnitPrices" EntitySet="UnitPrices" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Units_UnitTypes1" Association="dbRentalsModel.FK_Units_UnitTypes1">
+            <End Role="UnitTypes" EntitySet="UnitTypes" />
+            <End Role="Units" EntitySet="Units" />
+          </AssociationSet>
+          </EntityContainer>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="Advertising">
+          <Key>
+            <PropertyRef Name="AdvertisingId" />
+          </Key>
+          <Property Type="Int32" Name="AdvertisingId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="StartDate" Nullable="false" Precision="0" />
+          <Property Type="DateTime" Name="EndDate" Nullable="false" Precision="0" />
+          <Property Type="Boolean" Name="Active" Nullable="false" />
+          <Property Type="Int32" Name="Priority" Nullable="false" />
+          <Property Type="String" Name="Image" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="UserId" Nullable="false" />
+          <Property Type="DateTime" Name="Dated" Nullable="false" Precision="0" />
+          <Property Type="Int32" Name="OrganizationId" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BankTransactionDetails">
+          <Key>
+            <PropertyRef Name="BankTransactionDetailsId" />
+          </Key>
+          <Property Type="Int32" Name="BankTransactionDetailsId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="BankTransactionId" Nullable="false" />
+          <Property Type="String" Name="Month" Nullable="false" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Year" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="Amount" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="Int32" Name="PaymentTypeId" />
+          <Property Type="String" Name="BankTransactionReturnId" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Paid" />
+          <Property Type="Int32" Name="UserId" />
+          <NavigationProperty Name="BankTransactions" Relationship="dbRentalsModel.FK_BankTransactionDetails_BankTransactions" FromRole="BankTransactionDetails" ToRole="BankTransactions" />
+          <NavigationProperty Name="PaymentTypes" Relationship="dbRentalsModel.FK_BankTransactionDetails_PaymentTypes" FromRole="BankTransactionDetails" ToRole="PaymentTypes" />
+        </EntityType>
+        <EntityType Name="BankTransactions">
+          <Key>
+            <PropertyRef Name="TransactionId" />
+          </Key>
+          <Property Type="Int32" Name="TransactionId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="OwnerId" Nullable="false" />
+          <Property Type="Int32" Name="RentalId" Nullable="false" />
+          <Property Type="Int32" Name="ContractId" Nullable="false" />
+          <NavigationProperty Name="BankTransactionDetails" Relationship="dbRentalsModel.FK_BankTransactionDetails_BankTransactions" FromRole="BankTransactions" ToRole="BankTransactionDetails" />
+          <NavigationProperty Name="Contracts" Relationship="dbRentalsModel.FK_BankTransactions_Contracts" FromRole="BankTransactions" ToRole="Contracts" />
+          <NavigationProperty Name="Contracts1" Relationship="dbRentalsModel.FK_BankTransactions_Contracts1" FromRole="BankTransactions" ToRole="Contracts" />
+          <NavigationProperty Name="Owners" Relationship="dbRentalsModel.FK_BankTransactions_Owners" FromRole="BankTransactions" ToRole="Owners" />
+          <NavigationProperty Name="Rentals" Relationship="dbRentalsModel.FK_BankTransactions_Rentals" FromRole="BankTransactions" ToRole="Rentals" />
+        </EntityType>
+        <EntityType Name="Cities">
+          <Key>
+            <PropertyRef Name="CitiyId" />
+          </Key>
+          <Property Type="Int32" Name="CitiyId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="EnglishName" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="CountyId" Nullable="false" />
+          <Property Type="String" Name="ArabicName" MaxLength="30" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Countries" Relationship="dbRentalsModel.FK_Cities_Countries" FromRole="Cities" ToRole="Countries" />
+          <NavigationProperty Name="Districts" Relationship="dbRentalsModel.FK_Districts_Cities" FromRole="Cities" ToRole="Districts" />
+        </EntityType>
+        <EntityType Name="ContactUs">
+          <Key>
+            <PropertyRef Name="ContactUsId" />
+          </Key>
+          <Property Type="Int32" Name="ContactUsId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Subject" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Message" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Dated" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="Contracts">
+          <Key>
+            <PropertyRef Name="ContractId" />
+          </Key>
+          <Property Type="Int32" Name="ContractId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="RentalId" Nullable="false" />
+          <Property Type="Int32" Name="OwnerId" Nullable="false" />
+          <Property Type="DateTime" Name="StartDate" Nullable="false" Precision="0" />
+          <Property Type="DateTime" Name="EndDate" Nullable="false" Precision="0" />
+          <Property Type="Boolean" Name="EmailService" Nullable="false" />
+          <Property Type="Boolean" Name="SMSService" Nullable="false" />
+          <Property Type="Int32" Name="UserId" Nullable="false" />
+          <Property Type="Boolean" Name="Active" Nullable="false" />
+          <Property Type="DateTime" Name="Dated" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="CurrencyId" Nullable="false" />
+          <Property Type="Decimal" Name="Price" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="Int32" Name="OrganizationId" Nullable="false" />
+          <Property Type="Int32" Name="UnitId" Nullable="false" />
+          <Property Type="String" Name="Descriptions" MaxLength="150" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="BankTransactions" Relationship="dbRentalsModel.FK_BankTransactions_Contracts" FromRole="Contracts" ToRole="BankTransactions" />
+          <NavigationProperty Name="BankTransactions1" Relationship="dbRentalsModel.FK_BankTransactions_Contracts1" FromRole="Contracts" ToRole="BankTransactions" />
+          <NavigationProperty Name="Currency" Relationship="dbRentalsModel.FK_Contracts_Currency" FromRole="Contracts" ToRole="Currency" />
+          <NavigationProperty Name="Owners" Relationship="dbRentalsModel.FK_Contracts_Owners" FromRole="Contracts" ToRole="Owners" />
+          <NavigationProperty Name="Rentals" Relationship="dbRentalsModel.FK_Contracts_Rentals" FromRole="Contracts" ToRole="Rentals" />
+          <NavigationProperty Name="Units" Relationship="dbRentalsModel.FK_Contracts_Units" FromRole="Contracts" ToRole="Units" />
+        </EntityType>
+        <EntityType Name="Countries">
+          <Key>
+            <PropertyRef Name="CountryId" />
+          </Key>
+          <Property Type="Int32" Name="CountryId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="SortName" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EnglishName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="PhoneCode" Nullable="false" />
+          <Property Type="String" Name="ArabicName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Cities" Relationship="dbRentalsModel.FK_Cities_Countries" FromRole="Countries" ToRole="Cities" />
+        </EntityType>
+        <EntityType Name="Currency">
+          <Key>
+            <PropertyRef Name="CurrencyId" />
+          </Key>
+          <Property Type="Int32" Name="CurrencyId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ArabicName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EnglishName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Contracts" Relationship="dbRentalsModel.FK_Contracts_Currency" FromRole="Currency" ToRole="Contracts" />
+        </EntityType>
+        <EntityType Name="Districts">
+          <Key>
+            <PropertyRef Name="DistricId" />
+          </Key>
+          <Property Type="Int32" Name="DistricId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="EnglishName" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="CitiyId" Nullable="false" />
+          <Property Type="String" Name="ArabicName" MaxLength="30" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Cities" Relationship="dbRentalsModel.FK_Districts_Cities" FromRole="Districts" ToRole="Cities" />
+          <NavigationProperty Name="Streets" Relationship="dbRentalsModel.FK_Streets_Districts" FromRole="Districts" ToRole="Streets" />
+        </EntityType>
+        <EntityType Name="LogUserAction">
+          <Key>
+            <PropertyRef Name="SystemTransationId" />
+          </Key>
+          <Property Type="Int64" Name="SystemTransationId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="LogDate" Nullable="false" Precision="3" />
+          <Property Type="String" Name="PageUrl" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PageName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="UserId" Nullable="false" />
+          <Property Type="String" Name="LogAction" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IPAddress" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Modules">
+          <Key>
+            <PropertyRef Name="ModuleId" />
+          </Key>
+          <Property Type="Int32" Name="ModuleId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="ParentId" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="URL" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Priority" Nullable="false" />
+          <Property Type="Boolean" Name="Active" Nullable="false" />
+          <NavigationProperty Name="Users" Relationship="dbRentalsModel.UsersModules" FromRole="Modules" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Nationalities">
+          <Key>
+            <PropertyRef Name="NationalityId" />
+          </Key>
+          <Property Type="Int32" Name="NationalityId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="EnglishName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ArabicName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Owners" Relationship="dbRentalsModel.FK_Owners_Nationalities" FromRole="Nationalities" ToRole="Owners" />
+          <NavigationProperty Name="Rentals" Relationship="dbRentalsModel.FK_Rentals_Nationalities" FromRole="Nationalities" ToRole="Rentals" />
+          <NavigationProperty Name="Users" Relationship="dbRentalsModel.FK_Users_Nationalities" FromRole="Nationalities" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Organization">
+          <Key>
+            <PropertyRef Name="OrganizationId" />
+          </Key>
+          <Property Type="Int32" Name="OrganizationId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Binary" Name="Logo" MaxLength="Max" FixedLength="false" />
+          <Property Type="String" Name="Address" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Mobile" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Phone" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="UserId" />
+          <NavigationProperty Name="Owners" Relationship="dbRentalsModel.FK_Owners_Organization" FromRole="Organization" ToRole="Owners" />
+          <NavigationProperty Name="Rentals" Relationship="dbRentalsModel.FK_Rentals_Organization" FromRole="Organization" ToRole="Rentals" />
+          <NavigationProperty Name="TransactionLogs" Relationship="dbRentalsModel.FK_TransactionLogs_Organization" FromRole="Organization" ToRole="TransactionLogs" />
+        </EntityType>
+        <EntityType Name="Owners">
+          <Key>
+            <PropertyRef Name="OwnerId" />
+          </Key>
+          <Property Type="Int32" Name="OwnerId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="FullName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Exist" Nullable="false" />
+          <Property Type="DateTime" Name="Dated" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="UserId" Nullable="false" />
+          <Property Type="Int32" Name="OrganizationId" Nullable="false" />
+          <Property Type="String" Name="SSN" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Deleted" Nullable="false" />
+          <Property Type="String" Name="Phone" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Photo" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="NationalityId" Nullable="false" />
+          <NavigationProperty Name="BankTransactions" Relationship="dbRentalsModel.FK_BankTransactions_Owners" FromRole="Owners" ToRole="BankTransactions" />
+          <NavigationProperty Name="Contracts" Relationship="dbRentalsModel.FK_Contracts_Owners" FromRole="Owners" ToRole="Contracts" />
+          <NavigationProperty Name="Nationalities" Relationship="dbRentalsModel.FK_Owners_Nationalities" FromRole="Owners" ToRole="Nationalities" />
+          <NavigationProperty Name="Organization" Relationship="dbRentalsModel.FK_Owners_Organization" FromRole="Owners" ToRole="Organization" />
+          <NavigationProperty Name="Users" Relationship="dbRentalsModel.FK_Owners_Users" FromRole="Owners" ToRole="Users" />
+          <NavigationProperty Name="TransactionLogs" Relationship="dbRentalsModel.FK_TransactionLogs_Owners" FromRole="Owners" ToRole="TransactionLogs" />
+          <NavigationProperty Name="Units" Relationship="dbRentalsModel.FK_Units_Owners" FromRole="Owners" ToRole="Units" />
+        </EntityType>
+        <EntityType Name="PaymentTypes">
+          <Key>
+            <PropertyRef Name="PaymentTypeId" />
+          </Key>
+          <Property Type="Int32" Name="PaymentTypeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="EnglishName" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ArabicName" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="BankTransactionDetails" Relationship="dbRentalsModel.FK_BankTransactionDetails_PaymentTypes" FromRole="PaymentTypes" ToRole="BankTransactionDetails" />
+        </EntityType>
+        <EntityType Name="Permissions">
+          <Key>
+            <PropertyRef Name="PermissionsId" />
+          </Key>
+          <Property Type="Int32" Name="PermissionsId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="EnglishName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ArabicName" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Photos">
+          <Key>
+            <PropertyRef Name="PhotoId" />
+          </Key>
+          <Property Type="Int32" Name="PhotoId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Binary" Name="Image" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Type="Int32" Name="TentalUnitId" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Rentals">
+          <Key>
+            <PropertyRef Name="RentalId" />
+          </Key>
+          <Property Type="Int32" Name="RentalId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="FullName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Exist" Nullable="false" />
+          <Property Type="DateTime" Name="Dated" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="UserId" Nullable="false" />
+          <Property Type="Int32" Name="OrganizationId" Nullable="false" />
+          <Property Type="String" Name="SSN" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Deleted" Nullable="false" />
+          <Property Type="String" Name="Phone" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Photo" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="NationalityId" Nullable="false" />
+          <NavigationProperty Name="BankTransactions" Relationship="dbRentalsModel.FK_BankTransactions_Rentals" FromRole="Rentals" ToRole="BankTransactions" />
+          <NavigationProperty Name="Contracts" Relationship="dbRentalsModel.FK_Contracts_Rentals" FromRole="Rentals" ToRole="Contracts" />
+          <NavigationProperty Name="Nationalities" Relationship="dbRentalsModel.FK_Rentals_Nationalities" FromRole="Rentals" ToRole="Nationalities" />
+          <NavigationProperty Name="Organization" Relationship="dbRentalsModel.FK_Rentals_Organization" FromRole="Rentals" ToRole="Organization" />
+          <NavigationProperty Name="Users" Relationship="dbRentalsModel.FK_Rentals_Users" FromRole="Rentals" ToRole="Users" />
+          <NavigationProperty Name="TransactionLogs" Relationship="dbRentalsModel.FK_TransactionLogs_Rentals" FromRole="Rentals" ToRole="TransactionLogs" />
+        </EntityType>
+        <EntityType Name="Streets">
+          <Key>
+            <PropertyRef Name="StreetId" />
+          </Key>
+          <Property Type="Int32" Name="StreetId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="EnglishName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="DistricId" />
+          <Property Type="String" Name="ArabicName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Districts" Relationship="dbRentalsModel.FK_Streets_Districts" FromRole="Streets" ToRole="Districts" />
+          <NavigationProperty Name="Units" Relationship="dbRentalsModel.FK_Units_Streets" FromRole="Streets" ToRole="Units" />
+        </EntityType>
+        <EntityType Name="TransactionLogs">
+          <Key>
+            <PropertyRef Name="TransactionLogId" />
+          </Key>
+          <Property Type="Int64" Name="TransactionLogId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="UserId" />
+          <Property Type="Int32" Name="RentalId" />
+          <Property Type="Int32" Name="OwnerId" />
+          <Property Type="Int32" Name="UnitId" />
+          <Property Type="Int32" Name="UnitPriceId" />
+          <Property Type="Int32" Name="ContractId" />
+          <Property Type="Int32" Name="OrganizationId" />
+          <Property Type="Int32" Name="TransactionLogTypeId" Nullable="false" />
+          <Property Type="DateTime" Name="Dated" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="TransactionUserId" Nullable="false" />
+          <NavigationProperty Name="Organization" Relationship="dbRentalsModel.FK_TransactionLogs_Organization" FromRole="TransactionLogs" ToRole="Organization" />
+          <NavigationProperty Name="Owners" Relationship="dbRentalsModel.FK_TransactionLogs_Owners" FromRole="TransactionLogs" ToRole="Owners" />
+          <NavigationProperty Name="Rentals" Relationship="dbRentalsModel.FK_TransactionLogs_Rentals" FromRole="TransactionLogs" ToRole="Rentals" />
+          <NavigationProperty Name="TransactionLogTypes" Relationship="dbRentalsModel.FK_TransactionLogs_TransactionLogTypes" FromRole="TransactionLogs" ToRole="TransactionLogTypes" />
+          <NavigationProperty Name="Users" Relationship="dbRentalsModel.FK_TransactionLogs_Users" FromRole="TransactionLogs" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="TransactionLogTypes">
+          <Key>
+            <PropertyRef Name="TransactionLogITypeId" />
+          </Key>
+          <Property Type="Int32" Name="TransactionLogITypeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="EnglishName" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ArabicName" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TransactionLogs" Relationship="dbRentalsModel.FK_TransactionLogs_TransactionLogTypes" FromRole="TransactionLogTypes" ToRole="TransactionLogs" />
+        </EntityType>
+        <EntityType Name="UnitPrices">
+          <Key>
+            <PropertyRef Name="UnitPriceId" />
+          </Key>
+          <Property Type="Decimal" Name="UnitPriceId" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Decimal" Name="Price" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="Int32" Name="UnitId" Nullable="false" />
+          <Property Type="Int32" Name="CurrenceId" Nullable="false" />
+          <Property Type="Int32" Name="UserId" Nullable="false" />
+          <Property Type="DateTime" Name="Dated" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Users" Relationship="dbRentalsModel.FK_UnitPrices_Users" FromRole="UnitPrices" ToRole="Users" />
+          <NavigationProperty Name="Units" Relationship="dbRentalsModel.FK_UnitPrices_Units" FromRole="UnitPrices" ToRole="Units" />
+        </EntityType>
+        <EntityType Name="UnitTypes">
+          <Key>
+            <PropertyRef Name="UnitTypeId" />
+          </Key>
+          <Property Type="Int32" Name="UnitTypeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ArabicName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EnglishName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Units" Relationship="dbRentalsModel.FK_Units_UnitTypes1" FromRole="UnitTypes" ToRole="Units" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Type="Int32" Name="UserId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="FullName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Phone" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SSN" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Photo" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Exist" Nullable="false" />
+          <Property Type="DateTime" Name="Dated" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="OrganizationId" Nullable="false" />
+          <Property Type="Int32" Name="UserRegId" Nullable="false" />
+          <Property Type="Boolean" Name="Deleted" Nullable="false" />
+          <Property Type="Int32" Name="NationalityId" Nullable="false" />
+          <NavigationProperty Name="Nationalities" Relationship="dbRentalsModel.FK_Users_Nationalities" FromRole="Users" ToRole="Nationalities" />
+          <NavigationProperty Name="Owners" Relationship="dbRentalsModel.FK_Owners_Users" FromRole="Users" ToRole="Owners" />
+          <NavigationProperty Name="Rentals" Relationship="dbRentalsModel.FK_Rentals_Users" FromRole="Users" ToRole="Rentals" />
+          <NavigationProperty Name="TransactionLogs" Relationship="dbRentalsModel.FK_TransactionLogs_Users" FromRole="Users" ToRole="TransactionLogs" />
+          <NavigationProperty Name="UnitPrices" Relationship="dbRentalsModel.FK_UnitPrices_Users" FromRole="Users" ToRole="UnitPrices" />
+          <NavigationProperty Name="Modules" Relationship="dbRentalsModel.UsersModules" FromRole="Users" ToRole="Modules" />
+        </EntityType>
+        <Association Name="FK_BankTransactionDetails_BankTransactions">
+          <End Type="dbRentalsModel.BankTransactions" Role="BankTransactions" Multiplicity="1" />
+          <End Type="dbRentalsModel.BankTransactionDetails" Role="BankTransactionDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BankTransactions">
+              <PropertyRef Name="TransactionId" />
+            </Principal>
+            <Dependent Role="BankTransactionDetails">
+              <PropertyRef Name="BankTransactionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BankTransactionDetails_PaymentTypes">
+          <End Type="dbRentalsModel.PaymentTypes" Role="PaymentTypes" Multiplicity="0..1" />
+          <End Type="dbRentalsModel.BankTransactionDetails" Role="BankTransactionDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PaymentTypes">
+              <PropertyRef Name="PaymentTypeId" />
+            </Principal>
+            <Dependent Role="BankTransactionDetails">
+              <PropertyRef Name="PaymentTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BankTransactions_Contracts">
+          <End Type="dbRentalsModel.Contracts" Role="Contracts" Multiplicity="1" />
+          <End Type="dbRentalsModel.BankTransactions" Role="BankTransactions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contracts">
+              <PropertyRef Name="ContractId" />
+            </Principal>
+            <Dependent Role="BankTransactions">
+              <PropertyRef Name="ContractId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BankTransactions_Contracts1">
+          <End Type="dbRentalsModel.Contracts" Role="Contracts" Multiplicity="1" />
+          <End Type="dbRentalsModel.BankTransactions" Role="BankTransactions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contracts">
+              <PropertyRef Name="ContractId" />
+            </Principal>
+            <Dependent Role="BankTransactions">
+              <PropertyRef Name="ContractId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BankTransactions_Owners">
+          <End Type="dbRentalsModel.Owners" Role="Owners" Multiplicity="1" />
+          <End Type="dbRentalsModel.BankTransactions" Role="BankTransactions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Owners">
+              <PropertyRef Name="OwnerId" />
+            </Principal>
+            <Dependent Role="BankTransactions">
+              <PropertyRef Name="OwnerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BankTransactions_Rentals">
+          <End Type="dbRentalsModel.Rentals" Role="Rentals" Multiplicity="1" />
+          <End Type="dbRentalsModel.BankTransactions" Role="BankTransactions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rentals">
+              <PropertyRef Name="RentalId" />
+            </Principal>
+            <Dependent Role="BankTransactions">
+              <PropertyRef Name="RentalId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cities_Countries">
+          <End Type="dbRentalsModel.Countries" Role="Countries" Multiplicity="1" />
+          <End Type="dbRentalsModel.Cities" Role="Cities" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Countries">
+              <PropertyRef Name="CountryId" />
+            </Principal>
+            <Dependent Role="Cities">
+              <PropertyRef Name="CountyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Districts_Cities">
+          <End Type="dbRentalsModel.Cities" Role="Cities" Multiplicity="1" />
+          <End Type="dbRentalsModel.Districts" Role="Districts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cities">
+              <PropertyRef Name="CitiyId" />
+            </Principal>
+            <Dependent Role="Districts">
+              <PropertyRef Name="CitiyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Contracts_Currency">
+          <End Type="dbRentalsModel.Currency" Role="Currency" Multiplicity="1" />
+          <End Type="dbRentalsModel.Contracts" Role="Contracts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Currency">
+              <PropertyRef Name="CurrencyId" />
+            </Principal>
+            <Dependent Role="Contracts">
+              <PropertyRef Name="CurrencyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Contracts_Owners">
+          <End Type="dbRentalsModel.Owners" Role="Owners" Multiplicity="1" />
+          <End Type="dbRentalsModel.Contracts" Role="Contracts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Owners">
+              <PropertyRef Name="OwnerId" />
+            </Principal>
+            <Dependent Role="Contracts">
+              <PropertyRef Name="OwnerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Contracts_Rentals">
+          <End Type="dbRentalsModel.Rentals" Role="Rentals" Multiplicity="1" />
+          <End Type="dbRentalsModel.Contracts" Role="Contracts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rentals">
+              <PropertyRef Name="RentalId" />
+            </Principal>
+            <Dependent Role="Contracts">
+              <PropertyRef Name="RentalId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Streets_Districts">
+          <End Type="dbRentalsModel.Districts" Role="Districts" Multiplicity="0..1" />
+          <End Type="dbRentalsModel.Streets" Role="Streets" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Districts">
+              <PropertyRef Name="DistricId" />
+            </Principal>
+            <Dependent Role="Streets">
+              <PropertyRef Name="DistricId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Owners_Nationalities">
+          <End Type="dbRentalsModel.Nationalities" Role="Nationalities" Multiplicity="1" />
+          <End Type="dbRentalsModel.Owners" Role="Owners" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nationalities">
+              <PropertyRef Name="NationalityId" />
+            </Principal>
+            <Dependent Role="Owners">
+              <PropertyRef Name="NationalityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Rentals_Nationalities">
+          <End Type="dbRentalsModel.Nationalities" Role="Nationalities" Multiplicity="1" />
+          <End Type="dbRentalsModel.Rentals" Role="Rentals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nationalities">
+              <PropertyRef Name="NationalityId" />
+            </Principal>
+            <Dependent Role="Rentals">
+              <PropertyRef Name="NationalityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_Nationalities">
+          <End Type="dbRentalsModel.Nationalities" Role="Nationalities" Multiplicity="1" />
+          <End Type="dbRentalsModel.Users" Role="Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nationalities">
+              <PropertyRef Name="NationalityId" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="NationalityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Owners_Organization">
+          <End Type="dbRentalsModel.Organization" Role="Organization" Multiplicity="1" />
+          <End Type="dbRentalsModel.Owners" Role="Owners" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Organization">
+              <PropertyRef Name="OrganizationId" />
+            </Principal>
+            <Dependent Role="Owners">
+              <PropertyRef Name="OrganizationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Rentals_Organization">
+          <End Type="dbRentalsModel.Organization" Role="Organization" Multiplicity="1" />
+          <End Type="dbRentalsModel.Rentals" Role="Rentals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Organization">
+              <PropertyRef Name="OrganizationId" />
+            </Principal>
+            <Dependent Role="Rentals">
+              <PropertyRef Name="OrganizationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TransactionLogs_Organization">
+          <End Type="dbRentalsModel.Organization" Role="Organization" Multiplicity="0..1" />
+          <End Type="dbRentalsModel.TransactionLogs" Role="TransactionLogs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Organization">
+              <PropertyRef Name="OrganizationId" />
+            </Principal>
+            <Dependent Role="TransactionLogs">
+              <PropertyRef Name="OrganizationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Owners_Users">
+          <End Type="dbRentalsModel.Users" Role="Users" Multiplicity="1" />
+          <End Type="dbRentalsModel.Owners" Role="Owners" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Owners">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TransactionLogs_Owners">
+          <End Type="dbRentalsModel.Owners" Role="Owners" Multiplicity="0..1" />
+          <End Type="dbRentalsModel.TransactionLogs" Role="TransactionLogs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Owners">
+              <PropertyRef Name="OwnerId" />
+            </Principal>
+            <Dependent Role="TransactionLogs">
+              <PropertyRef Name="OwnerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Rentals_Users">
+          <End Type="dbRentalsModel.Users" Role="Users" Multiplicity="1" />
+          <End Type="dbRentalsModel.Rentals" Role="Rentals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Rentals">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TransactionLogs_Rentals">
+          <End Type="dbRentalsModel.Rentals" Role="Rentals" Multiplicity="0..1" />
+          <End Type="dbRentalsModel.TransactionLogs" Role="TransactionLogs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rentals">
+              <PropertyRef Name="RentalId" />
+            </Principal>
+            <Dependent Role="TransactionLogs">
+              <PropertyRef Name="RentalId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TransactionLogs_TransactionLogTypes">
+          <End Type="dbRentalsModel.TransactionLogTypes" Role="TransactionLogTypes" Multiplicity="1" />
+          <End Type="dbRentalsModel.TransactionLogs" Role="TransactionLogs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TransactionLogTypes">
+              <PropertyRef Name="TransactionLogITypeId" />
+            </Principal>
+            <Dependent Role="TransactionLogs">
+              <PropertyRef Name="TransactionLogTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TransactionLogs_Users">
+          <End Type="dbRentalsModel.Users" Role="Users" Multiplicity="0..1" />
+          <End Type="dbRentalsModel.TransactionLogs" Role="TransactionLogs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="TransactionLogs">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UnitPrices_Users">
+          <End Type="dbRentalsModel.Users" Role="Users" Multiplicity="1" />
+          <End Type="dbRentalsModel.UnitPrices" Role="UnitPrices" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="UnitPrices">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UsersModules">
+          <End Type="dbRentalsModel.Modules" Role="Modules" Multiplicity="*" />
+          <End Type="dbRentalsModel.Users" Role="Users" Multiplicity="*" />
+        </Association>
+        <ComplexType Name="Login_Users_Result">
+          <Property Type="Int32" Name="UserId" Nullable="false" />
+          <Property Type="String" Name="FullName" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="200" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="200" />
+          <Property Type="Boolean" Name="Exist" Nullable="false" />
+          <Property Type="DateTime" Name="Dated" Nullable="false" Precision="23" />
+          <Property Type="Int32" Name="OrganizationId" Nullable="false" />
+          <Property Type="String" Name="Photo" Nullable="true" MaxLength="200" />
+          <Property Type="Boolean" Name="Deleted" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="Units">
+          <Key>
+            <PropertyRef Name="UnitId" />
+          </Key>
+          <Property Type="Int32" Name="UnitId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="UnitNumber" Nullable="false" />
+          <Property Type="String" Name="UnitName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="StreetId" Nullable="false" />
+          <Property Type="Int32" Name="UnitTypeId" Nullable="false" />
+          <Property Type="Int32" Name="OwnerId" Nullable="false" />
+          <Property Type="String" Name="Description" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="UserId" Nullable="false" />
+          <Property Type="DateTime" Name="Dated" Nullable="false" Precision="3" />
+          <Property Type="Boolean" Name="Deleted" />
+          <Property Type="Int32" Name="ParentID" />
+          <NavigationProperty Name="Contracts" Relationship="dbRentalsModel.FK_Contracts_Units" FromRole="Units" ToRole="Contracts" />
+          <NavigationProperty Name="Owners" Relationship="dbRentalsModel.FK_Units_Owners" FromRole="Units" ToRole="Owners" />
+          <NavigationProperty Name="Streets" Relationship="dbRentalsModel.FK_Units_Streets" FromRole="Units" ToRole="Streets" />
+          <NavigationProperty Name="UnitPrices" Relationship="dbRentalsModel.FK_UnitPrices_Units" FromRole="Units" ToRole="UnitPrices" />
+          <NavigationProperty Name="UnitTypes" Relationship="dbRentalsModel.FK_Units_UnitTypes1" FromRole="Units" ToRole="UnitTypes" />
+        </EntityType>
+        <Association Name="FK_Contracts_Units">
+          <End Type="dbRentalsModel.Units" Role="Units" Multiplicity="1" />
+          <End Type="dbRentalsModel.Contracts" Role="Contracts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Units">
+              <PropertyRef Name="UnitId" />
+            </Principal>
+            <Dependent Role="Contracts">
+              <PropertyRef Name="UnitId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Units_Owners">
+          <End Type="dbRentalsModel.Owners" Role="Owners" Multiplicity="1" />
+          <End Type="dbRentalsModel.Units" Role="Units" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Owners">
+              <PropertyRef Name="OwnerId" />
+            </Principal>
+            <Dependent Role="Units">
+              <PropertyRef Name="OwnerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Units_Streets">
+          <End Type="dbRentalsModel.Streets" Role="Streets" Multiplicity="1" />
+          <End Type="dbRentalsModel.Units" Role="Units" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Streets">
+              <PropertyRef Name="StreetId" />
+            </Principal>
+            <Dependent Role="Units">
+              <PropertyRef Name="StreetId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UnitPrices_Units">
+          <End Type="dbRentalsModel.Units" Role="Units" Multiplicity="1" />
+          <End Type="dbRentalsModel.UnitPrices" Role="UnitPrices" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Units">
+              <PropertyRef Name="UnitId" />
+            </Principal>
+            <Dependent Role="UnitPrices">
+              <PropertyRef Name="UnitId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Units_UnitTypes1">
+          <End Type="dbRentalsModel.UnitTypes" Role="UnitTypes" Multiplicity="1" />
+          <End Type="dbRentalsModel.Units" Role="Units" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UnitTypes">
+              <PropertyRef Name="UnitTypeId" />
+            </Principal>
+            <Dependent Role="Units">
+              <PropertyRef Name="UnitTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dbRentalsModelStoreContainer" CdmEntityContainer="dbRentalsEntities">
+          <EntitySetMapping Name="Advertising">
+            <EntityTypeMapping TypeName="dbRentalsModel.Advertising">
+              <MappingFragment StoreEntitySet="Advertising">
+                <ScalarProperty Name="OrganizationId" ColumnName="OrganizationId" />
+                <ScalarProperty Name="Dated" ColumnName="Dated" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Priority" ColumnName="Priority" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="AdvertisingId" ColumnName="AdvertisingId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BankTransactionDetails">
+            <EntityTypeMapping TypeName="dbRentalsModel.BankTransactionDetails">
+              <MappingFragment StoreEntitySet="BankTransactionDetails">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Paid" ColumnName="Paid" />
+                <ScalarProperty Name="BankTransactionReturnId" ColumnName="BankTransactionReturnId" />
+                <ScalarProperty Name="PaymentTypeId" ColumnName="PaymentTypeId" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="Month" ColumnName="Month" />
+                <ScalarProperty Name="BankTransactionId" ColumnName="BankTransactionId" />
+                <ScalarProperty Name="BankTransactionDetailsId" ColumnName="BankTransactionDetailsId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BankTransactions">
+            <EntityTypeMapping TypeName="dbRentalsModel.BankTransactions">
+              <MappingFragment StoreEntitySet="BankTransactions">
+                <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+                <ScalarProperty Name="RentalId" ColumnName="RentalId" />
+                <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+                <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cities">
+            <EntityTypeMapping TypeName="dbRentalsModel.Cities">
+              <MappingFragment StoreEntitySet="Cities">
+                <ScalarProperty Name="ArabicName" ColumnName="ArabicName" />
+                <ScalarProperty Name="CountyId" ColumnName="CountyId" />
+                <ScalarProperty Name="EnglishName" ColumnName="EnglishName" />
+                <ScalarProperty Name="CitiyId" ColumnName="CitiyId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ContactUs">
+            <EntityTypeMapping TypeName="dbRentalsModel.ContactUs">
+              <MappingFragment StoreEntitySet="ContactUs">
+                <ScalarProperty Name="Dated" ColumnName="Dated" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ContactUsId" ColumnName="ContactUsId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contracts">
+            <EntityTypeMapping TypeName="dbRentalsModel.Contracts">
+              <MappingFragment StoreEntitySet="Contracts">
+                <ScalarProperty Name="Descriptions" ColumnName="Descriptions" />
+                <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+                <ScalarProperty Name="OrganizationId" ColumnName="OrganizationId" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+                <ScalarProperty Name="Dated" ColumnName="Dated" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="SMSService" ColumnName="SMSService" />
+                <ScalarProperty Name="EmailService" ColumnName="EmailService" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+                <ScalarProperty Name="RentalId" ColumnName="RentalId" />
+                <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Countries">
+            <EntityTypeMapping TypeName="dbRentalsModel.Countries">
+              <MappingFragment StoreEntitySet="Countries">
+                <ScalarProperty Name="ArabicName" ColumnName="ArabicName" />
+                <ScalarProperty Name="PhoneCode" ColumnName="PhoneCode" />
+                <ScalarProperty Name="EnglishName" ColumnName="EnglishName" />
+                <ScalarProperty Name="SortName" ColumnName="SortName" />
+                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Currency">
+            <EntityTypeMapping TypeName="dbRentalsModel.Currency">
+              <MappingFragment StoreEntitySet="Currency">
+                <ScalarProperty Name="EnglishName" ColumnName="EnglishName" />
+                <ScalarProperty Name="ArabicName" ColumnName="ArabicName" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Districts">
+            <EntityTypeMapping TypeName="dbRentalsModel.Districts">
+              <MappingFragment StoreEntitySet="Districts">
+                <ScalarProperty Name="ArabicName" ColumnName="ArabicName" />
+                <ScalarProperty Name="CitiyId" ColumnName="CitiyId" />
+                <ScalarProperty Name="EnglishName" ColumnName="EnglishName" />
+                <ScalarProperty Name="DistricId" ColumnName="DistricId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LogUserAction">
+            <EntityTypeMapping TypeName="dbRentalsModel.LogUserAction">
+              <MappingFragment StoreEntitySet="LogUserAction">
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+                <ScalarProperty Name="LogAction" ColumnName="LogAction" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="PageName" ColumnName="PageName" />
+                <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+                <ScalarProperty Name="LogDate" ColumnName="LogDate" />
+                <ScalarProperty Name="SystemTransationId" ColumnName="SystemTransationId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Modules">
+            <EntityTypeMapping TypeName="dbRentalsModel.Modules">
+              <MappingFragment StoreEntitySet="Modules">
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Priority" ColumnName="Priority" />
+                <ScalarProperty Name="URL" ColumnName="URL" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="ModuleId" ColumnName="ModuleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Nationalities">
+            <EntityTypeMapping TypeName="dbRentalsModel.Nationalities">
+              <MappingFragment StoreEntitySet="Nationalities">
+                <ScalarProperty Name="ArabicName" ColumnName="ArabicName" />
+                <ScalarProperty Name="EnglishName" ColumnName="EnglishName" />
+                <ScalarProperty Name="NationalityId" ColumnName="NationalityId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Organization">
+            <EntityTypeMapping TypeName="dbRentalsModel.Organization">
+              <MappingFragment StoreEntitySet="Organization">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Logo" ColumnName="Logo" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="OrganizationId" ColumnName="OrganizationId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Owners">
+            <EntityTypeMapping TypeName="dbRentalsModel.Owners">
+              <MappingFragment StoreEntitySet="Owners">
+                <ScalarProperty Name="NationalityId" ColumnName="NationalityId" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="SSN" ColumnName="SSN" />
+                <ScalarProperty Name="OrganizationId" ColumnName="OrganizationId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Dated" ColumnName="Dated" />
+                <ScalarProperty Name="Exist" ColumnName="Exist" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PaymentTypes">
+            <EntityTypeMapping TypeName="dbRentalsModel.PaymentTypes">
+              <MappingFragment StoreEntitySet="PaymentTypes">
+                <ScalarProperty Name="ArabicName" ColumnName="ArabicName" />
+                <ScalarProperty Name="EnglishName" ColumnName="EnglishName" />
+                <ScalarProperty Name="PaymentTypeId" ColumnName="PaymentTypeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Permissions">
+            <EntityTypeMapping TypeName="dbRentalsModel.Permissions">
+              <MappingFragment StoreEntitySet="Permissions">
+                <ScalarProperty Name="ArabicName" ColumnName="ArabicName" />
+                <ScalarProperty Name="EnglishName" ColumnName="EnglishName" />
+                <ScalarProperty Name="PermissionsId" ColumnName="PermissionsId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Photos">
+            <EntityTypeMapping TypeName="dbRentalsModel.Photos">
+              <MappingFragment StoreEntitySet="Photos">
+                <ScalarProperty Name="TentalUnitId" ColumnName="TentalUnitId" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="PhotoId" ColumnName="PhotoId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rentals">
+            <EntityTypeMapping TypeName="dbRentalsModel.Rentals">
+              <MappingFragment StoreEntitySet="Rentals">
+                <ScalarProperty Name="NationalityId" ColumnName="NationalityId" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="SSN" ColumnName="SSN" />
+                <ScalarProperty Name="OrganizationId" ColumnName="OrganizationId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Dated" ColumnName="Dated" />
+                <ScalarProperty Name="Exist" ColumnName="Exist" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="RentalId" ColumnName="RentalId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Streets">
+            <EntityTypeMapping TypeName="dbRentalsModel.Streets">
+              <MappingFragment StoreEntitySet="Streets">
+                <ScalarProperty Name="ArabicName" ColumnName="ArabicName" />
+                <ScalarProperty Name="DistricId" ColumnName="DistricId" />
+                <ScalarProperty Name="EnglishName" ColumnName="EnglishName" />
+                <ScalarProperty Name="StreetId" ColumnName="StreetId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TransactionLogs">
+            <EntityTypeMapping TypeName="dbRentalsModel.TransactionLogs">
+              <MappingFragment StoreEntitySet="TransactionLogs">
+                <ScalarProperty Name="TransactionUserId" ColumnName="TransactionUserId" />
+                <ScalarProperty Name="Dated" ColumnName="Dated" />
+                <ScalarProperty Name="TransactionLogTypeId" ColumnName="TransactionLogTypeId" />
+                <ScalarProperty Name="OrganizationId" ColumnName="OrganizationId" />
+                <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+                <ScalarProperty Name="UnitPriceId" ColumnName="UnitPriceId" />
+                <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+                <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+                <ScalarProperty Name="RentalId" ColumnName="RentalId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="TransactionLogId" ColumnName="TransactionLogId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TransactionLogTypes">
+            <EntityTypeMapping TypeName="dbRentalsModel.TransactionLogTypes">
+              <MappingFragment StoreEntitySet="TransactionLogTypes">
+                <ScalarProperty Name="ArabicName" ColumnName="ArabicName" />
+                <ScalarProperty Name="EnglishName" ColumnName="EnglishName" />
+                <ScalarProperty Name="TransactionLogITypeId" ColumnName="TransactionLogITypeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UnitPrices">
+            <EntityTypeMapping TypeName="dbRentalsModel.UnitPrices">
+              <MappingFragment StoreEntitySet="UnitPrices">
+                <ScalarProperty Name="Dated" ColumnName="Dated" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="CurrenceId" ColumnName="CurrenceId" />
+                <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="UnitPriceId" ColumnName="UnitPriceId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UnitTypes">
+            <EntityTypeMapping TypeName="dbRentalsModel.UnitTypes">
+              <MappingFragment StoreEntitySet="UnitTypes">
+                <ScalarProperty Name="EnglishName" ColumnName="EnglishName" />
+                <ScalarProperty Name="ArabicName" ColumnName="ArabicName" />
+                <ScalarProperty Name="UnitTypeId" ColumnName="UnitTypeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="dbRentalsModel.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="NationalityId" ColumnName="NationalityId" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="UserRegId" ColumnName="UserRegId" />
+                <ScalarProperty Name="OrganizationId" ColumnName="OrganizationId" />
+                <ScalarProperty Name="Dated" ColumnName="Dated" />
+                <ScalarProperty Name="Exist" ColumnName="Exist" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="SSN" ColumnName="SSN" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="UsersModules" TypeName="dbRentalsModel.UsersModules" StoreEntitySet="UsersModules">
+            <EndProperty Name="Users">
+              <ScalarProperty Name="UserId" ColumnName="UserId" />
+            </EndProperty>
+            <EndProperty Name="Modules">
+              <ScalarProperty Name="ModuleId" ColumnName="ModuleId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <FunctionImportMapping FunctionImportName="Login_Users" FunctionName="dbRentalsModel.Store.Login_Users">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="dbRentalsModel.Login_Users_Result">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Exist" ColumnName="Exist" />
+                <ScalarProperty Name="Dated" ColumnName="Dated" />
+                <ScalarProperty Name="OrganizationId" ColumnName="OrganizationId" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="Units">
+            <EntityTypeMapping TypeName="dbRentalsModel.Units">
+              <MappingFragment StoreEntitySet="Units">
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="Dated" ColumnName="Dated" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+                <ScalarProperty Name="UnitTypeId" ColumnName="UnitTypeId" />
+                <ScalarProperty Name="StreetId" ColumnName="StreetId" />
+                <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+                <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+                <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

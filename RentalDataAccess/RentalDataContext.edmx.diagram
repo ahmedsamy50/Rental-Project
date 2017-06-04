@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="018c7c4bfb734c74909601421ba842a3" Name="Diagram1" ZoomLevel="97">
+        <EntityTypeShape EntityType="dbRentalsModel.Advertising" Width="1.5" PointX="0.61781717493097166" PointY="4.2421714385236484" />
+        <EntityTypeShape EntityType="dbRentalsModel.BankTransactionDetails" Width="1.5" PointX="5.8577914768167734" PointY="4.63596089400163" />
+        <EntityTypeShape EntityType="dbRentalsModel.BankTransactions" Width="1.5" PointX="6.6288954162173415" PointY="29.608992873508946" />
+        <EntityTypeShape EntityType="dbRentalsModel.Cities" Width="1.5" PointX="5.5677647635190581" PointY="13.488424605451723" />
+        <EntityTypeShape EntityType="dbRentalsModel.ContactUs" Width="1.5" PointX="5.5150036222836949" PointY="31.297669380576195" />
+        <EntityTypeShape EntityType="dbRentalsModel.Contracts" Width="1.5" PointX="0.95298064358205559" PointY="1.7694143810167045" />
+        <EntityTypeShape EntityType="dbRentalsModel.Countries" Width="1.5" PointX="3.0205655484556058" PointY="30.528588339001214" />
+        <EntityTypeShape EntityType="dbRentalsModel.Currency" Width="1.5" PointX="5.9337073182378468" PointY="17.246833287760072" />
+        <EntityTypeShape EntityType="dbRentalsModel.Districts" Width="1.5" PointX="3.2457014784429696" PointY="10.814846058755576" />
+        <EntityTypeShape EntityType="dbRentalsModel.LogUserAction" Width="1.5" PointX="3.6005850115793683" PointY="3.914371730719866" />
+        <EntityTypeShape EntityType="dbRentalsModel.Modules" Width="1.5" PointX="3.5755919868012853" PointY="16.436752908135183" />
+        <EntityTypeShape EntityType="dbRentalsModel.Nationalities" Width="1.5" PointX="11.484918817637915" PointY="23.585668515221062" />
+        <EntityTypeShape EntityType="dbRentalsModel.Organization" Width="1.5" PointX="8.6377060583968213" PointY="5.046105104054373" />
+        <EntityTypeShape EntityType="dbRentalsModel.Owners" Width="1.5" PointX="10.003599709832855" PointY="26.515828845331367" />
+        <EntityTypeShape EntityType="dbRentalsModel.PaymentTypes" Width="1.5" PointX="7.2342765737484562" PointY="30.338443636120502" />
+        <EntityTypeShape EntityType="dbRentalsModel.Permissions" Width="1.5" PointX="7.4377409310255853" PointY="1.4212893999280825" />
+        <EntityTypeShape EntityType="dbRentalsModel.Photos" Width="1.5" PointX="10.593520011097901" PointY="30.933527558545361" />
+        <EntityTypeShape EntityType="dbRentalsModel.Rentals" Width="1.5" PointX="5.2002655943856881" PointY="16.217485137385076" />
+        <EntityTypeShape EntityType="dbRentalsModel.Streets" Width="1.5" PointX="10.347685725590068" PointY="3.8035692292282213" />
+        <EntityTypeShape EntityType="dbRentalsModel.TransactionLogs" Width="1.5" PointX="2.1406131303592648" PointY="23.970594760016816" />
+        <EntityTypeShape EntityType="dbRentalsModel.TransactionLogTypes" Width="1.5" PointX="4.870300928536011" PointY="27.356112746221996" />
+        <EntityTypeShape EntityType="dbRentalsModel.UnitPrices" Width="1.5" PointX="3.4189228058880765" PointY="5.1590190106812024" />
+        <EntityTypeShape EntityType="dbRentalsModel.UnitTypes" Width="1.5" PointX="5.1178761185695771" PointY="8.5289599637170141" />
+        <EntityTypeShape EntityType="dbRentalsModel.Users" Width="1.5" PointX="11.025623950653534" PointY="6.9529663058710129" />
+        <AssociationConnector Association="dbRentalsModel.FK_BankTransactionDetails_BankTransactions" />
+        <AssociationConnector Association="dbRentalsModel.FK_BankTransactionDetails_PaymentTypes" />
+        <AssociationConnector Association="dbRentalsModel.FK_BankTransactions_Contracts" />
+        <AssociationConnector Association="dbRentalsModel.FK_BankTransactions_Contracts1" />
+        <AssociationConnector Association="dbRentalsModel.FK_BankTransactions_Owners" />
+        <AssociationConnector Association="dbRentalsModel.FK_BankTransactions_Rentals" />
+        <AssociationConnector Association="dbRentalsModel.FK_Cities_Countries" />
+        <AssociationConnector Association="dbRentalsModel.FK_Districts_Cities" />
+        <AssociationConnector Association="dbRentalsModel.FK_Contracts_Currency" />
+        <AssociationConnector Association="dbRentalsModel.FK_Contracts_Owners" />
+        <AssociationConnector Association="dbRentalsModel.FK_Contracts_Rentals" />
+        <AssociationConnector Association="dbRentalsModel.FK_Streets_Districts" />
+        <AssociationConnector Association="dbRentalsModel.FK_Owners_Nationalities" />
+        <AssociationConnector Association="dbRentalsModel.FK_Rentals_Nationalities" />
+        <AssociationConnector Association="dbRentalsModel.FK_Users_Nationalities" />
+        <AssociationConnector Association="dbRentalsModel.FK_Owners_Organization" />
+        <AssociationConnector Association="dbRentalsModel.FK_Rentals_Organization" />
+        <AssociationConnector Association="dbRentalsModel.FK_TransactionLogs_Organization" />
+        <AssociationConnector Association="dbRentalsModel.FK_Owners_Users" />
+        <AssociationConnector Association="dbRentalsModel.FK_TransactionLogs_Owners" />
+        <AssociationConnector Association="dbRentalsModel.FK_Rentals_Users" />
+        <AssociationConnector Association="dbRentalsModel.FK_TransactionLogs_Rentals" />
+        <AssociationConnector Association="dbRentalsModel.FK_TransactionLogs_TransactionLogTypes" />
+        <AssociationConnector Association="dbRentalsModel.FK_TransactionLogs_Users" />
+        <AssociationConnector Association="dbRentalsModel.FK_UnitPrices_Users" />
+        <AssociationConnector Association="dbRentalsModel.UsersModules" />
+        <EntityTypeShape EntityType="dbRentalsModel.Units" Width="1.5" PointX="5.44957645304947" PointY="17.137268551223571" />
+        <AssociationConnector Association="dbRentalsModel.FK_Contracts_Units" />
+        <AssociationConnector Association="dbRentalsModel.FK_Units_Owners" />
+        <AssociationConnector Association="dbRentalsModel.FK_Units_Streets" />
+        <AssociationConnector Association="dbRentalsModel.FK_UnitPrices_Units" />
+        <AssociationConnector Association="dbRentalsModel.FK_Units_UnitTypes1" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,15 @@
+
+@import url('fullcalendar.css');
+
+
+
+
+.fc th {
+    padding: 10px 0;
+    background: #4e5154;
+    color: #fff;
+    border-color: #5e6165;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
